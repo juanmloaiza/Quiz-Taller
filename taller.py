@@ -183,3 +183,36 @@ def agregar_implante_menu():
 
     else:
         print("Opción inválida")
+        
+def main():
+    sistema = SistemaGestionImplantes()
+
+    while True:
+        print("""Menú Principal:
+        1. Agregar Implante
+        2. Eliminar Implante
+        3. Editar Implante
+        4. Mostrar Inventario
+        5. Salir
+        >>""")
+        opcion = input("Ingrese el número de opción: ")
+
+        if opcion == "1":
+            nuevo_implante = agregar_implante_menu()
+            sistema.agregar_implante(nuevo_implante)
+
+            paciente = input("Ingrese el nombre del paciente: ")
+            fecha_implantacion = input("Ingrese la fecha de implantación (YYYY-MM-DD): ")
+            medico_responsable = input("Ingrese el nombre del médico responsable: ")
+            estado_implante = input("Ingrese el estado del implante: ")
+            nuevo_implante.asignar_paciente(paciente, fecha_implantacion, medico_responsable, estado_implante)
+
+            while True:
+                opcion_revision = input("¿Desea agregar una fecha de revisión? (Sí/No): ")
+                if opcion_revision.lower() == "si":
+                    fecha_revision = input("Ingrese la fecha de revisión (YYYY-MM-DD): ")
+                    nuevo_implante.agregar_revision(fecha_revision)
+                elif opcion_revision.lower() == "no":
+                    break
+                else:
+                    print("Opción inválida. Por favor, ingrese 'Sí' o 'No'.")
