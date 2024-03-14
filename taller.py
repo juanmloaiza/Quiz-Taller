@@ -217,3 +217,14 @@ def main():
                     break
                 else:
                     print("Opción inválida. Por favor, ingrese 'Sí' o 'No'.")
+                    
+        elif opcion == "2":
+            indice = int(input("Ingrese el índice del implante a eliminar: ")) - 1
+            sistema.eliminar_implante(indice)
+
+        elif opcion == "3":
+            indice = int(input("Ingrese el índice del implante a editar: ")) - 1
+            implante_editar = sistema.implantes[indice]
+            nuevo_implante = agregar_implante_menu()
+            nuevo_implante.asignar_paciente(implante_editar._paciente, implante_editar._fecha_implantacion, implante_editar._medico_responsable, implante_editar._estado_implante)
+            sistema.editar_implante(indice, nuevo_implante)
