@@ -38,3 +38,8 @@ class ImplanteMedico:
 
     def agregar_revision(self, fecha_revision):
         self._fechas_revision.append(fecha_revision)
+
+class ProtesisCadera(ImplanteMedico):
+    def __init__(self, material, tipo_fijacion, tamaño):
+        super().__init__(material, tipo_fijacion)
+        self._tamaño = tamaño
