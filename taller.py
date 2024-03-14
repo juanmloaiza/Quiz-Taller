@@ -101,3 +101,14 @@ class ImplanteDental(ImplanteMedico):
 
     def set_forma(self, forma):
         self._forma = forma
+        
+class ProtesisRodilla(ImplanteMedico):
+    def __init__(self, material, tipo_fijacion, tamaño):
+        super().__init__(material, tipo_fijacion)
+        self._tamaño = tamaño
+
+    def get_tamaño(self):
+        return self._tamaño
+
+    def set_tamaño(self, tamaño):
+        self._tamaño = tamaño
