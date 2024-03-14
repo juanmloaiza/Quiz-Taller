@@ -112,3 +112,29 @@ class ProtesisRodilla(ImplanteMedico):
 
     def set_tamaño(self, tamaño):
         self._tamaño = tamaño
+        
+class SistemaGestionImplantes:
+    def __init__(self):
+        self.implantes = []
+
+    def agregar_implante(self, implante):
+        self.implantes.append(implante)
+
+    def eliminar_implante(self, indice):
+        del self.implantes[indice]
+
+    def editar_implante(self, indice, nuevo_implante):
+        self.implantes[indice] = nuevo_implante
+
+    def mostrar_inventario(self):
+        for i, implante in enumerate(self.implantes):
+            print("Implante", i + 1)
+            print("Material:", implante.get_material())
+            print("Tipo de Fijación:", implante.get_tipo_fijacion())
+            seguimiento = implante.obtener_seguimiento()
+            print("Paciente:", seguimiento['Paciente'])
+            print("Fecha de Implante:", seguimiento['Fecha de Implantación'])
+            print("Médico Responsable:", seguimiento['Médico Responsable'])
+            print("Estado del Implante:", seguimiento['Estado del Implante'])
+            print("Fechas de Revisión:", seguimiento['Fechas de Revisión'])
+            print("")
