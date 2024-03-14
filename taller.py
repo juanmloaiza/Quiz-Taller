@@ -90,3 +90,14 @@ class StentCoronario(ImplanteMedico):
 
     def set_diametro(self, diametro):
         self._diametro = diametro
+
+class ImplanteDental(ImplanteMedico):
+    def __init__(self, material, tipo_fijacion, forma):
+        super().__init__(material, tipo_fijacion)
+        self._forma = forma
+
+    def get_forma(self):
+        return self._forma
+
+    def set_forma(self, forma):
+        self._forma = forma
