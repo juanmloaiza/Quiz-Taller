@@ -56,3 +56,20 @@ class Marcapasos(ImplanteMedico):
         self._num_electrodos = num_electrodos
         self._inalambrico = inalambrico
         self._frecuencia_estimulacion = frecuencia_estimulacion
+    def get_num_electrodos(self):
+        return self._num_electrodos
+
+    def set_num_electrodos(self, num_electrodos):
+        self._num_electrodos = num_electrodos
+
+    def get_inalambrico(self):
+        return self._inalambrico
+
+    def set_inalambrico(self, inalambrico):
+        self._inalambrico = inalambrico
+
+    def get_frecuencia_estimulacion(self):
+        return self._frecuencia_estimulacion
+
+    def set_frecuencia_estimulacion(self, frecuencia_estimulacion):
+        self._frecuencia_estimulacion = frecuencia_estimulacion
