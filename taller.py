@@ -49,3 +49,10 @@ class ProtesisCadera(ImplanteMedico):
 
     def set_tamaño(self, tamaño):
         self._tamaño = tamaño
+
+class Marcapasos(ImplanteMedico):
+    def __init__(self, material, tipo_fijacion, num_electrodos, inalambrico, frecuencia_estimulacion):
+        super().__init__(material, tipo_fijacion)
+        self._num_electrodos = num_electrodos
+        self._inalambrico = inalambrico
+        self._frecuencia_estimulacion = frecuencia_estimulacion
