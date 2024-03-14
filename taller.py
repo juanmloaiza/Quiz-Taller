@@ -79,3 +79,14 @@ class StentCoronario(ImplanteMedico):
         super().__init__(material, tipo_fijacion)
         self._longitud = longitud
         self._diametro = diametro
+    def get_longitud(self):
+        return self._longitud
+
+    def set_longitud(self, longitud):
+        self._longitud = longitud
+
+    def get_diametro(self):
+        return self._diametro
+
+    def set_diametro(self, diametro):
+        self._diametro = diametro
