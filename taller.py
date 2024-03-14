@@ -73,3 +73,9 @@ class Marcapasos(ImplanteMedico):
 
     def set_frecuencia_estimulacion(self, frecuencia_estimulacion):
         self._frecuencia_estimulacion = frecuencia_estimulacion
+
+class StentCoronario(ImplanteMedico):
+    def __init__(self, material, tipo_fijacion, longitud, diametro):
+        super().__init__(material, tipo_fijacion)
+        self._longitud = longitud
+        self._diametro = diametro
