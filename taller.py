@@ -228,3 +228,18 @@ def main():
             nuevo_implante = agregar_implante_menu()
             nuevo_implante.asignar_paciente(implante_editar._paciente, implante_editar._fecha_implantacion, implante_editar._medico_responsable, implante_editar._estado_implante)
             sistema.editar_implante(indice, nuevo_implante)
+        
+        elif opcion == "4":
+            print("\nInventario de Implantes:")
+            sistema.mostrar_inventario()
+
+        elif opcion == "5":
+            print("Saliendo...")
+            break
+
+        else:
+            print("Opción inválida")
+
+
+if __name__ == "__main__":
+    main()
