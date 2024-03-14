@@ -212,6 +212,7 @@ def main():
                 if opcion_revision.lower() == "si":
                     fecha_revision = input("Ingrese la fecha de revisión (YYYY-MM-DD): ")
                     nuevo_implante.agregar_revision(fecha_revision)
+                    break
                 elif opcion_revision.lower() == "no":
                     break
                 else:
