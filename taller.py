@@ -212,6 +212,7 @@ def main():
                 if opcion_revision.lower() == "si":
                     fecha_revision = input("Ingrese la fecha de revisión (YYYY-MM-DD): ")
                     nuevo_implante.agregar_revision(fecha_revision)
+                    print("implante guardo con éxito!")
                     break
                 elif opcion_revision.lower() == "no":
                     break
@@ -238,7 +239,7 @@ def main():
             break
 
         else:
-            print("Opción inválida")
+            print("Opción inválida, intentelo nuevamente")
 
 
 if __name__ == "__main__":
