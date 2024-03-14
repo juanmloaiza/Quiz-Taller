@@ -138,3 +138,48 @@ class SistemaGestionImplantes:
             print("Estado del Implante:", seguimiento['Estado del Implante'])
             print("Fechas de Revisión:", seguimiento['Fechas de Revisión'])
             print("")
+def agregar_implante_menu():
+    print("""Agregar Nuevo Implante:
+    1. Prótesis de Cadera
+    2. Marcapasos
+    3. Stent Coronario
+    4. Implante Dental
+    5. Prótesis de Rodilla
+    >>""")
+    opcion = input("Ingrese el número de opción: ")
+
+    if opcion == "1":
+        material = input("Ingrese el material: ")
+        tipo_fijacion = input("Ingrese el tipo de fijación: ")
+        tamaño = input("Ingrese el tamaño: ")
+        return ProtesisCadera(material, tipo_fijacion, tamaño)
+
+    elif opcion == "2":
+        material = input("Ingrese el material: ")
+        tipo_fijacion = input("Ingrese el tipo de fijación: ")
+        num_electrodos = input("Ingrese el número de electrodos: ")
+        inalambrico = input("¿Es inalámbrico? (Sí/No): ")
+        frecuencia_estimulacion = input("Ingrese la frecuencia de estimulación: ")
+        return Marcapasos(material, tipo_fijacion, num_electrodos, inalambrico, frecuencia_estimulacion)
+
+    elif opcion == "3":
+        material = input("Ingrese el material: ")
+        tipo_fijacion = input("Ingrese el tipo de fijación: ")
+        longitud = input("Ingrese la longitud: ")
+        diametro = input("Ingrese el diámetro: ")
+        return StentCoronario(material, tipo_fijacion, longitud, diametro)
+
+    elif opcion == "4":
+        material = input("Ingrese el material: ")
+        tipo_fijacion = input("Ingrese el tipo de fijación: ")
+        forma = input("Ingrese la forma: ")
+        return ImplanteDental(material, tipo_fijacion, forma)
+
+    elif opcion == "5":
+        material = input("Ingrese el material: ")
+        tipo_fijacion = input("Ingrese el tipo de fijación: ")
+        tamaño = input("Ingrese el tamaño: ")
+        return ProtesisRodilla(material, tipo_fijacion, tamaño)
+
+    else:
+        print("Opción inválida")
